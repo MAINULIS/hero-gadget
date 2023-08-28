@@ -1,10 +1,17 @@
 import React from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import { Outlet } from 'react-router-dom';
 
 const App = () => {
   return (
-    <div>
-       <h3 className='text-2xl'>This is app </h3>
-    </div>
+    <>
+    <Header />
+     <div className='min-h-[calc(100vh-137px)]'>
+     <Outlet />
+     </div>
+    <Footer />
+    </>
   );
 };
 
